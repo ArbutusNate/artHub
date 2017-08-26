@@ -54,28 +54,8 @@
                     height: 650,
                     bodyOverflow: true
                 });
-
-                $(document).on('click', '#tryUs', function (event) {
-                    event.preventDefault();
-                    $('.canvas-modal').iziModal('open');
-                });
-
-                $(document).on('click', '.close', function (event) {
-                    event.preventDefault();
-                    $('.canvas-modal').iziModal('close');
-                });
                 //  browse art on click
                 $("#columns").iziModal();
-
-                $(document).on('click', '#browseArt', function(event) {
-                    event.preventDefault();
-                    $('#columns').iziModal('open');
-                });
-
-                $(document).on('click', '.close', function(event) {
-                    event.preventDefault();
-                    $('#columns').iziModal('close');
-                });
 
                 // P5 FUNCTIONS
                 $(document).on('click', '#drawShapes', function(event) {
