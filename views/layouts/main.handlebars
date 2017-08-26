@@ -85,6 +85,11 @@
                     $( "#insertFunction" ).attr( "src", "/drawShapes" );
                 });
 
+                $(document).on('click', '#trippyGuy', function(event) {
+                    event.preventDefault();
+                    $( "#insertFunction" ).attr( "src", "/trippyGuy" );
+                });
+
                 $(document).on('click', '#frequencyOsc', function(event) {
                     event.preventDefault();
                     $( "#insertFunction" ).attr( "src", "/freqOsc" );

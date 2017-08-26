@@ -23,7 +23,11 @@ module.exports = function(app) {
   // SONG
   app.get("/song", function(req, res) {
     console.log("requesting song function");
-    res.sendFile(path.join(__dirname, '/../public/song', 'song.html'));
+    res.sendFile(path.join(__dirname, '/../public/Song', 'song.html'));
+  });
+  app.get("/trippyGuy", function(req, res) {
+    console.log("requesting trippy function");
+    res.sendFile(path.join(__dirname, '/../public/trippyShit', 'trippyindex.html'));
   });
   // DRAW SHAPES
   app.get("/drawShapes", function(req, res) {
