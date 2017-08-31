@@ -1,8 +1,7 @@
 <body>
-    <header class="header">
-        <button id="tryUs" data-izimodal-open="#modal-iframe" data-izimodal-transitionin="bounceInDown">Make Art!</button>
-        {{!-- <a href="https://github.com/dolce/iziModal" id="tryUs">Try Us</a> --}}
-        <a href="https://github.com/dolce/iziModal" id="browseArt">Browse Art</a>
+    <header class="header btncontainer">
+        <button id="tryUs" class="btn head-btn" data-izimodal-open="#modal-iframe" data-izimodal-transitionin="bounceInDown">Make Art!</button>
+        <button id="browseArt" class="btn head-btn" data-izimodal-open="#columns" data-izimodal-transitionin="bounceInDown">Browse Art</button>
     </header>
 
     <div class="img">
@@ -29,7 +28,6 @@
         <figure>
         </figure>
     </div>
-
     <div id="modal-iframe" aria-hidden="false" aria-labelledby="modal-iframe" role="dialog" class="canvas-modal iziModal" data-izimodal-group="grupo1" style="z-index: 999; border-radius: 3px; overflow: hidden; {{!-- max-width: 600px; --}} display: none; height: 800px;">
         <div id="iframe-header" class="iziModal-header iziModal-noSubtitle" style="padding-right: 70px;">
             <i class="iziModal-header-icon icon-settings_system_daydream"></i>
@@ -45,10 +43,19 @@
             <div class="dropdown">
                 <button id="dropbtn" class="modal-title">Draw</button>
                 <div class="dropdown-content">
+                    <p><button class="func-btn" id='song'>Make a Song</button></p>
                     <p><button class="func-btn" id='drawShapes'>Draw Shapes</button></p>
+                    <p><button class="func-btn" id='trippyGuy'>Trippiness</button></p>
                     <p><button class="func-btn" id='frequencyOsc'>Freq. Oscillation</button></p>
                     <p><button class="func-btn" id='drawPath'>Draw Path</button></p>
                     <p><button class="func-btn" id='particles'>Particles</button></p>
+                </div>
+            </div>
+            <div class="dropdown dropdownVideo">
+                <button id="dropbtn" id="song" class="modal-title">Add Video</button>
+                <div class="dropdown-content dropdown-video">
+                    <p><button>Record</button></p>
+                    <p><button>Stop</button></p>
                 </div>
             </div>
 

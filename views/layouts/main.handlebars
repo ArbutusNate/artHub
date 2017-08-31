@@ -9,15 +9,14 @@
   {{!-- TITLE --}}
     <title>artHub</title>
   {{!-- HEAD LINKS --}}
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <!-- link for arthub font family -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inconsolata|Playfair+Display|Rubik">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.0/css/iziModal.min.css">
 
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   {{!-- HANDLEBARS BODY FROM MAIN.HANDLEBARS --}}
     {{{ body }}}
@@ -39,8 +38,7 @@
                 console.log('ready');
                 setTimeout(function() {
                     $(".element0").typed({
-                        strings: ["draw a thing", "draw a plant"],
-                        smartBackspace: true,
+                        strings: ["DRAW SOMETHING", "DRAW WHATEVER", "DRAW DIFFERENTLY", "DRAW SOCIALLY"],
                         typeSpeed: 30, // typing speed
                         backDelay: 750, // pause before backspacing
                         loop: true, // loop on or off (true or false)
@@ -55,38 +53,23 @@
 
                 //  try us on click
                 $(".canvas-modal").iziModal({
-                    width: 950,
-                    height: 800,
+                    width: 800,
+                    height: 650,
                     bodyOverflow: true
-                });
-
-                $(document).on('click', '#tryUs', function (event) {
-                    event.preventDefault();
-                    $('.canvas-modal').iziModal('open');
-                });
-
-                $(document).on('click', '.close', function (event) {
-                    event.preventDefault();
-                    $('.canvas-modal').iziModal('close');
                 });
                 //  browse art on click
                 $("#columns").iziModal();
-
-                $(document).on('click', '#browseArt', function(event) {
-                    event.preventDefault();
-                    $('#columns').iziModal('open');
-                });
-
-                $(document).on('click', '.close', function(event) {
-                    event.preventDefault();
-                    $('#columns').iziModal('close');
-                });
 
                 // P5 FUNCTIONS
                 $(document).on('click', '#drawShapes', function(event) {
                     event.preventDefault();
                     console.log("clicked drawShapes");
                     $( "#insertFunction" ).attr( "src", "/drawShapes" );
+                });
+
+                $(document).on('click', '#trippyGuy', function(event) {
+                    event.preventDefault();
+                    $( "#insertFunction" ).attr( "src", "/trippyGuy" );
                 });
 
                 $(document).on('click', '#frequencyOsc', function(event) {
@@ -102,6 +85,11 @@
                 $(document).on('click', '#particles', function(event) {
                     event.preventDefault();
                     $( "#insertFunction" ).attr( "src", "/particles" );
+                });
+                $(document).on('click', '#song', function(event) {
+                    event.preventDefault();
+                    console.log("trying to request drawShapes function")
+                    $( "#insertFunction" ).attr( "src", "/song" );
                 });
             });
         </script>

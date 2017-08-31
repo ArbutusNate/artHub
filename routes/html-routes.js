@@ -20,13 +20,22 @@ module.exports = function(app) {
       res.render("index", hbsObject);
     })
   });
+  // SONG
+  app.get("/song", function(req, res) {
+    console.log("requesting song function");
+    res.sendFile(path.join(__dirname, '/../public/Song', 'song.html'));
+  });
+  app.get("/trippyGuy", function(req, res) {
+    console.log("requesting trippy function");
+    res.sendFile(path.join(__dirname, '/../public/trippyShit', 'trippyindex.html'));
+  });
   // DRAW SHAPES
   app.get("/drawShapes", function(req, res) {
     console.log("requesting drawShapes function");
     res.sendFile(path.join(__dirname, '/../public/drawShapes', 'drawindex.html'));
   });
   // FREQ OSC
-  app.get("/freqOsc", function(req, res) {
+  app.get("/frequencyOsc", function(req, res) {
     console.log("requesting freqOsc function");
     res.sendFile(path.join(__dirname, '/../public/frequencyOscillation', 'oscillateFrequencyIndex.html'));
 

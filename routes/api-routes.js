@@ -12,7 +12,6 @@ module.exports = function(app) {
   //POST Methods
   app.post("/", function(req, res){
     console.log("Posting img from api-routes")
-    // console.log(req.body.image);
     cloudinary.v2.uploader.upload(req.body.image, function(error, result) {
       if(!error) {
         console.log(result.secure_url);
@@ -23,14 +22,6 @@ module.exports = function(app) {
         console.log(error);
       }
     });
-    // db.Users.create({
-    //   //POST AND CREATE FUNCTIONS
-    // }).then(function (dbUsers){
-    //   var hbsObject = {
-    //     userinfo: dbUsers
-    //   };
-    //   console.log(hbsObject)
-    // })
   });
   //PUT Methods
   app.put("/:id", function(req, res) {
