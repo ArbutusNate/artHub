@@ -23,7 +23,7 @@
     {{{ body }}}
   {{!-- Scripts --}}
      <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.0/js/iziModal.min.js" type="text/javascript"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+     // <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
       {{!-- TYPED.JS INFO --}}
        <script>
             $(document).on('click', '#imageSave', function(event) {
@@ -39,15 +39,19 @@
                 console.log('ready');
                 setTimeout(function() {
                     $(".element0").typed({
-                        strings: ["DRAW SOME SHIT", "DRAW SOME POOP"],
+                        strings: ["draw a thing", "draw a plant"],
+                        smartBackspace: true,
                         typeSpeed: 30, // typing speed
                         backDelay: 750, // pause before backspacing
-                        smartBackspace: true,
                         loop: true, // loop on or off (true or false)
                         loopCount: false, // number of loops, false = infinite
-                        callback: function() {} // call function after typing is done
                     });
                 }, 0);
+                // var typed = new Typed(".typed-element", {
+                //   // Waits 1000ms after typing "First"
+                //   strings: ["This is a JavaScript library", "This is an ES6 module"],
+                //   smartBackspace: true // Default value
+                // });
 
                 //  try us on click
                 $(".canvas-modal").iziModal({
